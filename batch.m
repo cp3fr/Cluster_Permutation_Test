@@ -31,10 +31,7 @@ chanlocs = alldata(1).chanlocs;
 times = alldata(1).times;
 
 %number of permuations
-nperm = 100; %1000 is better
-
-%% Note: Here the analysis is run on single trials for one subject
-%        Typically you would like to run it conditon-average ERPs from multiple subjects
+nperm = 100; %better use 500-1000
 
 %prepare the data
 data = cell(1,length(conditions_to_compare));
