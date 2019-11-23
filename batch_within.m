@@ -23,7 +23,7 @@ clear data3;
 %cluster permutation test within-subjects
 cfg = [];
 cfg.alpha = 0.05;
-cfg.nperm = 500;
+cfg.nperm = 1000;
 cfg.srate =  500;
 cfg.minchan = 2;
 cfg.method = 'distance';
@@ -39,7 +39,7 @@ figure;
 for iclust = 1:length(clust)
 
   count = max(n) * (iclust-1);
-  
+
   for i = 1:n(iclust)
 
     count = count+1;
@@ -48,6 +48,9 @@ for iclust = 1:length(clust)
 
     imagesc(s.(clust{iclust}).chanTime==i)
 
-    title(sprintf('%s cluster\nt = %.4f\np = %.4f\nh = %d', clust{iclust}, s.(clust{iclust}).t(i),s.(clust{iclust}).p(i),s.(clust{iclust}).h(i)    ));
+    title(sprintf('%s cluster #%d\nt = %.4f\np = %.4f\nh = %d', clust{iclust}, i, s.(clust{iclust}).t(i),s.(clust{iclust}).p(i),s.(clust{iclust}).h(i)    ));
+
+    xlabel('sp')
+    ylabel('chan')
   end
 end
