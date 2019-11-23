@@ -37,7 +37,9 @@ clust = {'pos','neg'};
 figure;
 
 for iclust = 1:length(clust)
+
   count = max(n) * (iclust-1);
+  
   for i = 1:n(iclust)
 
     count = count+1;
@@ -46,6 +48,6 @@ for iclust = 1:length(clust)
 
     imagesc(s.(clust{iclust}).chanTime==i)
 
-    title(sprintf('%s cluster\nt = %.4f\np = %.4f\nh = %d', clust{icond}, s.(clust{iclust}).t(i),s.(clust{iclust}).p(i),s.(clust{iclust}).h(i)    ));
+    title(sprintf('%s cluster\nt = %.4f\np = %.4f\nh = %d', clust{iclust}, s.(clust{iclust}).t(i),s.(clust{iclust}).p(i),s.(clust{iclust}).h(i)    ));
   end
 end
