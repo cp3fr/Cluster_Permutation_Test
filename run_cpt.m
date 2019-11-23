@@ -8,7 +8,7 @@ function [s] = run_cpt(data,varargin)
 %    .alpha:   significance threshold (default: 0.05)
 % s:           statistical results
 %
-% based on http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock/
+% based on /tutorial/cluster_permutation_timelock/
 % Currently only working between two conditions.. 
 % Implement analysis across more conditions too
 
